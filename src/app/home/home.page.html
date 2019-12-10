@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Final Project App 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+ <h1>Welcome to Daily Hydrate</h1>
+ <h3>Enter your water intake below:</h3>
+ <br>
+ <br>
+ 
+
+<ion-item>
+ <ion-label>Ounces:</ion-label>
+<input type="number" placeholder="Enter amount" [(ngModel)]="waterAmount"/>
+<ion-button color="primary" (click)="addWater()">Submit!</ion-button>
+</ion-item>
+
+<ion-list>
+  <ion-item *ngFor="let water of totalAmount">
+    {{ water }}
+    
+  </ion-item>
+</ion-list>
+
+
+<br>
+<br>
+<br>
+<br>
+<ion-button color="secondary" expand="full">Goal=64 ounces</ion-button>
+<ion-button color="tertiary" expand="full" (click)="gotoAbout()">Hydration Info/Tips!</ion-button>
+
+
+
+  </div>
+</ion-content>
